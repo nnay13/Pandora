@@ -1,0 +1,224 @@
+/*Principales Zones*/
+* { margin:0; padding:0; }
+
+body { font: 14px Arial; }
+#page-wrap { width : 1024px; margin: 25px auto;}
+
+#zone1  { font:14px Arial;
+          position:relative;
+          padding:20px;
+          margin:auto;
+          margin-top:80px;
+          height:440px;
+          width:600px;
+          -moz-box-shadow:8px 8px 10px #444;
+          -webkit-box-shadow:8px 8px 10px #444;
+          background:#eee;
+          -moz-border-radius:15px;
+          -webkit-border-radius:15px;
+          z-index:10;}
+#zone1 p { font:16px Arial;padding:5px;}
+#photo {position:relative;margin:18px 0 18px 0;}
+#photo h1{position:absolute; top:20px;}
+#photo h1{position:absolute; top:18px;left:113px;}
+#photo h2{position:absolute; top:52px;left:142px;}
+#infos {width: 328px;position:absolute;}
+#utilactions {width: 250px;
+              height:387px;
+              position:absolute;
+              left:373px;
+              top:0px;
+              padding-top:93px;
+              padding-left:18px;
+              -moz-border-radius-topright:15px;
+              -webkit-border-radius-topright:15px;
+              -moz-border-radius-bottomright:15px;
+              -webkit-border-radius-bottomright:15px;
+              background:#f9f9f9;
+            }
+#utilactions h2{ margin-bottom:12px;color:#666;}
+#utilactions a {margin-left:16px;}
+.grosbouton {display:block;
+              height:48px;
+              padding:24px 0px 0px 52px;
+              text-decoration:none;
+              color:black;
+              font-size:18px;
+}
+.grosbouton:hover {color:#999;}
+#modifier {background: url("/images/modifier-48.png") no-repeat;background-position: center left;}
+#modifier:hover {background: url("/images/modifier-48-grey.png") no-repeat;background-position: center left;}
+
+#supprimer {background: url("/images/supprimer-48.png") no-repeat;
+            background-position: center left;
+            position:absolute;
+            bottom:10px;
+            margin-top:32px;}
+#supprimer:hover {background: url("/images/supprimer-48-grey.png") no-repeat;background-position: center left;}
+
+#synchro {background: url("/images/synchro-48.png") no-repeat;background-position: center left;}
+#synchro:hover {background: url("/images/synchro-48-grey.png") no-repeat;background-position: center left;}
+
+#okbouton {background: url("/images/ok-48.png") no-repeat;
+          background-position: center left;
+          margin-left:112px;
+          margin-top:18px;}
+#okbouton:hover {background: url("/images/ok-48-grey.png") no-repeat;background-position: center left;}
+
+#ok {margin:auto;
+        width:100px;}
+
+/*Operations*/]
+
+#operations {}
+
+.nouveau {
+            display:inline-block;
+            text-decoration:none;
+            padding-top:8px;
+            height:28px;
+         }
+
+.nouveau a { text-decoration: none; padding: 8px 0px 10px 38px;} 
+.nouveau a:visited { text-decoration: none; color:black;} 
+.nouveau a:hover { text-decoration: none; color:#999;} 
+
+#nouveau-lien {background: url("/images/ajouter.png") no-repeat; margin-left:616px;}
+#nouveau-lien:hover {background: url("/images/ajouter-grey.png") no-repeat;}
+
+
+#retour.selected {background: url("/images/retour-32.png") no-repeat;background-position: center left;margin-left:616px;}
+#retour.selected:hover {background: url("/images/retour-32-grey.png") no-repeat;background-position: center left;}
+
+/* Page de Login*/
+#login-page {margin:auto;background: url("/images/pandora-login.png") no-repeat;width:819px;height:600px;}
+#formulaire { display:inline-block;
+              margin-top:233px;
+              margin-left:435px;
+              width:300px;
+              font: 16px Arial;
+              background:#eee;
+              -moz-border-radius:10px;
+              -webkit-border-radius:10px;
+              padding:20px 20px 20px 30px;}
+
+#formulaire label {
+       	margin-bottom:4px;
+	display:block;
+	font-weight:bold;
+}
+.login-input {width:20em;margin:4px;margin-bottom:10px;}
+.commit-button { width:4em;margin-top:4px;margin-left:16.5em;}
+
+/*Tooltips*/
+
+
+
+/*Zone de Navigation pour les Vues*/
+#navigation{margin:5px 0px 5px 450px;border-bottom:1px dashed #ccc;}
+
+.selected {
+            display:inline-block;
+            text-decoration:none;
+            padding-top:16px;
+            height:32px;
+            margin-left:10px;
+         }
+
+.selected a { text-decoration: none; padding: 8px 0px 10px 38px;} 
+.selected a:visited { text-decoration: none; color:black;} 
+
+
+.unselected {
+            display:inline-block;
+            text-decoration:none;
+            padding-top:16px;
+            height:32px;
+            margin-left:10px;
+         }
+
+.unselected a { text-decoration: none; padding: 8px 0px 10px 38px;color:#999;} 
+.unselected a:visited { text-decoration: none; color:#999;} 
+.unselected a:hover { text-decoration: none; color:black;}
+
+#nav-utilisateur.selected {background: url("/images/utilisateur.png") no-repeat;background-position: center left;}
+#nav-utilisateur.unselected:hover {background: url("/images/utilisateur.png") no-repeat;background-position: center left;}
+#nav-utilisateur.unselected {background: url("/images/utilisateur-grey.png") no-repeat;background-position: center left;}
+
+
+#nav-fonction.selected {background: url("/images/fonction.png") no-repeat;background-position: center left;}
+#nav-fonction.unselected:hover {background: url("/images/fonction.png") no-repeat;background-position: center left;}
+#nav-fonction.unselected {background: url("/images/fonction-grey.png") no-repeat;background-position: center left;}
+
+#nav-service.selected {background: url("/images/service.png") no-repeat;background-position: center left;}
+#nav-service.unselected:hover {background: url("/images/service.png") no-repeat;background-position: center left;}
+#nav-service.unselected {background: url("/images/service-grey.png") no-repeat;background-position: center left;}
+
+#nav-site.selected {background: url("/images/site.png") no-repeat;background-position: center left;}
+#nav-site.unselected:hover {background: url("/images/site.png") no-repeat;background-position: center left;}
+#nav-site.unselected {background: url("/images/site-grey.png") no-repeat;background-position: center left;}
+
+#nav-parametre.selected {background: url("/images/parametre.png") no-repeat;background-position: center left;}
+#nav-parametre.unselected:hover {background: url("/images/parametre.png") no-repeat;background-position: center left;}
+#nav-parametre.unselected {background: url("/images/parametre-grey.png") no-repeat;background-position: center left;}
+
+#nav-logout.unselected:hover {background: url("/images/logout.png") no-repeat;background-position: center left;}
+#nav-logout.unselected {background: url("/images/logout-grey.png") no-repeat;background-position: center left;}
+
+
+/*Titres*/
+
+h1.titre {background-position: left;padding : 10px 0px 10px 56px;display:inline-block;}
+#operations h1.titre {width:200px;}
+
+h1#listing-utilisateurs {background: url("/images/utilisateur-big.png") no-repeat;}
+h1#listing-services {background: url("/images/service-big.png") no-repeat;}
+h1#listing-sites {background: url("/images/site-big.png") no-repeat;}
+h1#listing-etablissements {background: url("/images/etablissement-big.png") no-repeat;}
+h1#fonctions {background: url("/images/fonction-big.png") no-repeat;}
+h1#add {background: url("/images/ajouter-big.png") no-repeat;}
+h1#voir {background: url("/images/voir-big.png") no-repeat;}
+h1#modifier {background: url("/images/modifier-big.png") no-repeat;}
+h1#parametres { background: url("/images/parametre-big.png") no-repeat;}
+h1#authentification { background: url("/images/authentification.png") no-repeat;}
+
+/*Table*/
+table { width: 1024px; margin-top:10px; border-collapse:collapse;position:absolute;top:129px;}
+table a {text-decoration: none;color: black;}
+/*table a:hover {color:#eee;}*/
+thead {background: #ccc;}
+td, th { padding: 5px; text-align: center; }
+td.small { font-size:12px;}
+td.nom { text-align : left;}
+
+td {border: 1px solid #ccc;}
+
+tr.ligneimpaire { background: #eee;}
+
+th {background: #ccc;
+    border: 1px solid #888;
+    padding-left:10px;
+    padding-right:10px;}
+
+th.actions { width:66px;}
+th #utilisateur{background: url("/images/utilisateur-16.png") no-repeat;padding-left:20px;}
+th #login{background: url("/images/login-16.png") no-repeat;padding-left:20px;}
+th #motdepasse{background: url("/images/password-16.png") no-repeat;padding-left:20px;}
+th #email{background: url("/images/mail-16.png") no-repeat;padding-left:20px;}
+th #telephone{background: url("/images/telephone-16.png") no-repeat;padding-left:20px;}
+th #fonction{background: url("/images/fonction-16.png") no-repeat;padding-left:20px;}
+th #service{background: url("/images/service-16.png") no-repeat;padding-left:20px;}
+th #site{background: url("/images/site-16.png") no-repeat;padding-left:20px;}
+th #etablissement{background: url("/images/etablissement-16.png") no-repeat;padding-left:20px;}
+th #responsable{background: url("/images/responsable-16.png") no-repeat;padding-left:20px;}
+th #effectif{background: url("/images/effectif-16.png") no-repeat;padding-left:20px;}
+
+.highlight { background:#feffb3;}
+/*Liens*/
+
+
+
+
+/*Formulaires*/
+select {width:14em;}
+

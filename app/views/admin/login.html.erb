@@ -1,0 +1,15 @@
+<div id="login-page">
+  <div id="formulaire">
+    <% form_tag do |form| %>
+      <p>
+      <label for="login">Login:</label>
+      <%= text_field_tag :login, params[:login],:class=>"login-input"%>
+      </p>
+      <p>
+      <label for="login">Mot de passe:</label>
+      <%= password_field_tag :password, params[:password],:class=>"login-input"%>
+      </p>
+      <%= submit_tag "ok",:class=>"commit-button"%>
+    <%end%>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+  <h1 id="listing-services" class="titre">Services</h1>
+  <div id="nouveau-lien" class="nouveau">
+    <%= link_to 'Nouveau service', new_service_path %>
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th><span id="service">Nom</span></th>
+      <th><span id="responsable">Responsable</span></th>
+      <th><span id="etablissement">Etablissement</span></th>
+      <th class="actions"><span id="effectif">Effectif</span></th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @services.each do |service| %>
+      <tr class="<%= cycle('lignepaire','ligneimpaire') %>">
+        <td><%=link_to service.nom,service %></td>
+        <td><%=link_to service.responsable.nom.upcase+" "+service.responsable.prenom.capitalize,service.responsable unless service.responsable.nil? %></td>
+        <td><%= link_to service.etablissement.nom, etablissement_path(service.etablissement) unless service.etablissement.nil? %></td>
+        <td><%= link_to service.utilisateurs.count, service %></td>
+        <td><%= link_to image_tag("voir.png", :size=>"22x22",:border=>0), service %>
+          <%= link_to image_tag("modifier.png", :size=>"22x22",:border=>0), edit_service_path(service),:class=>"modifier" %>
+          <%= link_to image_tag("supprimer.png", :size=>"22x22",:border=>0), service, :confirm => 'Vous confirmez la suppression ?', :method => :delete,:class=>"supprimer" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

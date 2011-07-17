@@ -1,0 +1,29 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+  <h1 id="listing-sites" class="titre">Sites</h1>
+  <div id="nouveau-lien" class="nouveau">
+    <%= link_to 'Nouveau site', new_site_path %>
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th><span id="site">Nom</span></th>
+      <th><span id="responsable">Responsable</span></th>
+      <th class="actions"><span id="effectif">Effectif</span></th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sites.each do |site| %>
+      <tr class="<%= cycle('lignepaire','ligneimpaire') %>">
+        <td><%= link_to site.nom.capitalize, site %></td>
+        <td><%=link_to site.responsable.nom.upcase+" "+site.responsable.prenom.capitalize,site.responsable unless site.responsable.nil? %></td>
+        <td><%=link_to site.utilisateurs.count,site%></td>
+        <td><%= link_to image_tag("voir.png", :size=>"22x22",:border=>0), site %>
+          <%= link_to image_tag("modifier.png", :size=>"22x22",:border=>0), edit_site_path(site),:class=>"modifier" %>
+          <%= link_to image_tag("supprimer.png", :size=>"22x22",:border=>0), site, :confirm => 'Vous confirmez la suppression ?', :method => :delete,:class=>"supprimer" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

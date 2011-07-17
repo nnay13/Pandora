@@ -1,0 +1,62 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="zone1">
+  <div id="photo">
+  <%= image_tag "photos/"+@utilisateur.photo, :size=>"96x96", :border=>0 %>
+  <h1>
+    <%=h @utilisateur.nom.upcase %>
+  </h1>
+<h2>
+  <%= h  @utilisateur.prenom.capitalize %>
+</h2>
+</div>
+  <div id="infos">
+    <p>
+    <b>Login:</b>
+    <%=h @utilisateur.login %>
+    </p>
+
+    <p>
+    <b>Password:</b>
+    <%=h @utilisateur.password %>
+    </p>
+
+    <p>
+    <b>Email:</b>
+    <%=h @utilisateur.email %>
+    </p>
+
+    <p>
+    <b>T&eacute;l&eacute;phone:</b>
+    <%=h @utilisateur.telephone %>
+    </p>
+
+    <p>
+    <b>Fonction:</b>
+    <%=h @utilisateur.fonction.intitule unless @utilisateur.fonction.nil?%>
+    </p>
+
+    <p>
+    <b>Service:</b>
+    <%=h @utilisateur.service.nom unless @utilisateur.service.nil?%>
+    </p>
+
+    <p>
+    <b>Site:</b>
+    <%=h @utilisateur.site.nom.capitalize unless @utilisateur.site.nil?%>
+    </p>
+
+    <p>
+    <b>Etablissement:</b>
+    <%=h @utilisateur.service.etablissement.nom unless @utilisateur.service.etablissement.nil?%>
+    </p>
+
+  <%= link_to 'Ok', :back,:class=>"grosbouton",:id=>"okbouton" %>
+
+  </div>
+  <div id="utilactions">
+    <h2>Actions:</h2>
+    <%= link_to 'Modifier', edit_utilisateur_path(@utilisateur),:class=> "grosbouton",:id=>"modifier"%> 
+    <%= link_to 'Synchro LDAP', edit_utilisateur_path(@utilisateur),:class=> "grosbouton",:id=>"synchro"%> 
+    <%= link_to "Supprimer", @utilisateur, :confirm => "Vous confirmez la suppression de l'utilisateur ?", :method => :delete,:class=>"grosbouton",:id=>"supprimer" %>
+  </div>
+</div>

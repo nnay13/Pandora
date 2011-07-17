@@ -1,0 +1,10 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+<h1 id="listing-services" class="titre">
+  <%=h @service.nom %>
+</h1>
+<div id="retour" class="selected">
+  <%= link_to 'Retour', session[:retour] %>
+</div>
+  <%= render :partial=>"shared/users", :object=>@service.utilisateurs %>
+

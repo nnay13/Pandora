@@ -1,0 +1,19 @@
+<h1 id="add" class="titre">Nouveau site</h1>
+
+<% form_for(@site) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </p>
+  <p>
+    <%= f.label "Responsable" %><br />
+    <%= f.text_field :utilisateur_id %>
+  </p>
+  <p>
+    <%= f.submit 'Créer' %>
+  </p>
+<% end %>
+
+<%= link_to 'Nouveau', sites_path %>

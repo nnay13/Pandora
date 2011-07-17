@@ -1,0 +1,26 @@
+<h1 id="modifier" class="titre">Modifier le service</h1>
+
+<div id="zone1">
+  <% form_for(@service) do |f| %>
+    <%= f.error_messages %>
+
+    <p>
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+    </p>
+    <p>
+    <%= f.label "Responsable" %><br />
+    <%= f.select :utilisateur_id, @responsables %>
+    </p>
+    <p>
+    <%= f.label "Etablissement" %><br />
+    <%= f.select :etablissement_id, @etablissements %>
+    </p>
+    <p>
+    <%= f.submit 'Modifier' %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to 'Voir', @service %> |
+<%= link_to 'Retour', services_path %>

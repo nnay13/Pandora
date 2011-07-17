@@ -1,0 +1,9 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+  <h1 id="listing-sites" class="titre">
+    <%=h @site.nom.capitalize %>
+  </h1>
+  <div id="retour" class="selected">
+    <%= link_to 'Retour', session[:retour] %>
+  </div>
+    <%= render :partial=>"shared/users", :object=>@site.utilisateurs %>

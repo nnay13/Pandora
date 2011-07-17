@@ -1,0 +1,47 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nom: MyString
+  prenom: MyString
+  login: MyString
+  password: MyString
+  email: MyString
+  service_id: 1
+  site_id: 1
+  etablissement_id: 1
+  telephone: MyString
+
+two:
+  nom: MyString
+  prenom: MyString
+  login: MyString
+  password: MyString
+  email: MyString
+  service_id: 1
+  site_id: 1
+  etablissement_id: 1
+  telephone: MyString
+
+
+
+# == Schema Information
+#
+# Table name: utilisateurs
+#
+#  id               :integer(4)      not null, primary key
+#  nom              :string(255)
+#  prenom           :string(255)
+#  login            :string(255)
+#  password         :string(255)
+#  email            :string(255)
+#  service_id       :integer(4)
+#  site_id          :integer(4)
+#  etablissement_id :integer(4)
+#  telephone        :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  fonction_id      :integer(4)
+#  parametre_id     :integer(4)
+#  photo            :string(255)
+#
+

@@ -1,0 +1,12 @@
+<h1>Editing parametre</h1>
+
+<% form_for(@parametre) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @parametre %> |
+<%= link_to 'Back', parametres_path %>

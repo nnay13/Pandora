@@ -1,0 +1,13 @@
+
+<p>
+  <h1 id="listing-etablissements"  class="titre"><%=h @etablissement.nom %></h1>
+</p>
+
+<p>
+  <b>Directeur:</b>
+  <%=h @etablissement.utilisateur_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_etablissement_path(@etablissement) %> |
+<%= link_to 'Back', etablissements_path %>

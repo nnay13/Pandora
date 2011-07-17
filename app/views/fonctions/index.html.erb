@@ -1,0 +1,29 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+  <h1 id="fonctions" class="titre">Fonctions</h1>
+  <div id="nouveau-lien" class="nouveau">
+    <%= link_to 'Nouvelle fonction', new_fonction_path %>
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th><span id="fonction">Intitul&eacute;</span></th>
+      <th class="actions"><span id="effectif">Effectif</span></th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @fonctions.each do |fonction| %>
+      <tr class="<%= cycle('lignepaire','ligneimpaire') %>">
+        <td><%=link_to fonction.intitule.capitalize, fonction %></td>
+        <td><%= link_to fonction.utilisateurs.count, fonction %></td>
+        <td><%= link_to image_tag("voir.png", :size=>"22x22",:border=>0), fonction %>
+          <%= link_to image_tag("modifier.png", :size=>"22x22",:border=>0), edit_fonction_path(fonction),:class=>"modifier" %>
+          <%= link_to image_tag("supprimer.png", :size=>"22x22",:border=>0), fonction, :confirm => 'Confirmez-vous la suppression ?', :method => :delete,:class=>"supprimer" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />

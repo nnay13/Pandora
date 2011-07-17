@@ -1,0 +1,24 @@
+  <table>
+    <thead>
+      <th></th>
+      <th><span id="utilisateur">Utilisateur</span></th>
+      <th><span id="login">Login</span></th>
+      <th><span id="motdepasse">Mot de passe</span></th>
+      <th><span id="fonction">Fonction</span></th>
+      <th class="actions">Actions</th>
+    </thead>
+    <tbody>
+      <% users.each do |utilisateur| %>
+        <tr class="<%= cycle('lignepaire','ligneimpaire') %>">
+          <td><%= image_tag "photos/sky2.jpg" %></td>
+          <td><%= link_to utilisateur.nom.upcase+" "+utilisateur.prenom.capitalize, utilisateur %></td>
+          <td><%= link_to utilisateur.login, utilisateur%></td>
+          <td><%= link_to utilisateur.password, utilisateur%></td>
+          <td><%= link_to utilisateur.fonction.intitule.capitalize, utilisateur.fonction unless utilisateur.fonction.nil?%></td>
+          <td><%= link_to image_tag("voir.png", :size=>"22x22",:border=>0), utilisateur %>
+            <%= link_to image_tag("modifier.png", :size=>"22x22",:border=>0), edit_utilisateur_path(utilisateur),:class=>"modifier" %>
+            <%= link_to image_tag("supprimer.png", :size=>"22x22",:border=>0), utilisateur, :confirm => "Vous confirmez la suppression de l'utilisateur ?", :method => :delete,:class=>"supprimer" %></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>

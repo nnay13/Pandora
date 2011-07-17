@@ -1,0 +1,19 @@
+<%= render :partial=>"shared/navigation" %>
+<h1 id="parametres" class="titre">Parametres</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @parametres.each do |parametre| %>
+  <tr>
+    <td><%= link_to 'Show', parametre %></td>
+    <td><%= link_to 'Edit', edit_parametre_path(parametre) %></td>
+    <td><%= link_to 'Destroy', parametre, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New parametre', new_parametre_path %>

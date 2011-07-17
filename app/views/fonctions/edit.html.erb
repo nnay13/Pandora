@@ -1,0 +1,19 @@
+<%= render :partial=>"shared/navigation"%>
+<h1 id="modifier" class="titre">Modifier fonction</h1>
+
+<div id="zone1">
+  <% form_for(@fonction) do |f| %>
+    <%= f.error_messages %>
+
+    <p>
+    <%= f.label "Intitul&eacute;" %><br />
+    <%= f.text_field :intitule %>
+    </p>
+    <p>
+    <%= f.submit 'Modifier' %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to 'Voir', @fonction %> |
+<%= link_to 'Retour', fonctions_path %>

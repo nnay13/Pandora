@@ -1,0 +1,30 @@
+<% utilisateurs.each do |utilisateur| %>
+  <tr class="<%= cycle('lignepaire','ligneimpaire') %>">
+    <td>
+      <% if not utilisateur.parametre_id.nil? %>
+        <%= image_tag("admin.png",:size=>"16x16",:border=>0)%> 
+      <%end%>
+    </td>
+    <td class="nom"><%= link_to utilisateur.nom.upcase, utilisateur %></td>
+    <td class="nom"><%= link_to utilisateur.prenom.capitalize, utilisateur %></td>
+    <td><%= link_to utilisateur.login, utilisateur %></td>
+    <td><%= link_to utilisateur.password, utilisateur %></td>
+    <td class="small"><%= mail_to utilisateur.email %></td>
+    <td><%=  h utilisateur.telephone %></td>
+    <td><%=  link_to utilisateur.fonction.intitule.capitalize, 
+                        :controller=>"fonctions",
+                        :action=>"show", 
+                        :id=>utilisateur.fonction_id %>
+    </td>
+    <td><%=  link_to utilisateur.service.nom,
+                       :controller=>"services",
+                       :action=>"show",
+                       :id=>utilisateur.service_id %>
+    </td>
+    <td><%=  link_to utilisateur.site.nom.capitalize, 
+                      :controller=>"sites",
+                      :action=>"show", 
+                      :id=>utilisateur.site_id %>
+    </td>
+  </tr>
+  <% end %>

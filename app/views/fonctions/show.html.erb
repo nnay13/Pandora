@@ -1,0 +1,10 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+<h1 id="fonctions" class="titre">
+  <%=h @fonction.intitule.capitalize.pluralize %>
+</h1>
+<div id="retour" class="selected">
+  <%= link_to 'Retour', session[:retour] %>
+</div>
+</div>
+  <%= render :partial=>"shared/users", :object=>@fonction.utilisateurs %>

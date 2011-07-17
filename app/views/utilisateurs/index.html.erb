@@ -1,0 +1,26 @@
+<%= render :partial=>"shared/navigation"%>
+<div id="operations">
+  <h1 id="listing-utilisateurs" class="titre">Utilisateurs</h1>
+  <div id="nouveau-lien" class="nouveau">
+    <%= link_to 'Nouvel utilisateur', new_utilisateur_path %>
+  </div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nom</th>
+      <th><%= link_to  "Pr&eacute;nom", "utilisateurs?order=prenom" %></th>
+      <th><span id="login">Login</span></th>
+      <th><span id="motdepasse">Password</span></th>
+      <th><span id="email">Email</span></th>
+      <th><span id="telephone"> T&eacute;l&eacute;phone</span></th>
+      <th><span id="fonction">Fonction</span></th>
+      <th><span id="service">Service</span></th>
+      <th><span id="site">Site</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial=>'utilisateurs', :object=>@utilisateurs %>
+  </tbody>
+</table>

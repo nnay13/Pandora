@@ -1,0 +1,20 @@
+<h1>Modification de l'&eacute;tablissement</h1>
+
+<% form_for(@etablissement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </p>
+  <p>
+    <%= f.label 'Directeur' %><br />
+    <%= f.text_field :utilisateur_id %>
+  </p>
+  <p>
+    <%= f.submit 'Modifier' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voir', @etablissement %> |
+<%= link_to 'Retour', etablissements_path %>

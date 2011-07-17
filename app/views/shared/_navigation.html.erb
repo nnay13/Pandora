@@ -1,0 +1,60 @@
+<% if controller.controller_name=="utilisateurs" %>
+  <% classutilisateur="selected"%>
+  <% classfonction="unselected"%>
+  <% classservice="unselected"%>
+  <% classsite="unselected"%>
+  <% classparametre="unselected"%>
+<%end%>
+
+<% if controller.controller_name=="fonctions" %>
+  <% classutilisateur="unselected"%>
+  <% classfonction="selected"%>
+  <% classservice="unselected"%>
+  <% classsite="unselected"%>
+  <% classparametre="unselected"%>
+<%end%>
+
+<% if controller.controller_name=="services" %>
+  <% classutilisateur="unselected"%>
+  <% classfonction="unselected"%>
+  <% classservice="selected"%>
+  <% classsite="unselected"%>
+  <% classparametre="unselected"%>
+<%end%>
+
+<% if controller.controller_name=="sites" %>
+  <% classutilisateur="unselected"%>
+  <% classfonction="unselected"%>
+  <% classservice="unselected"%>
+  <% classsite="selected"%>
+  <% classparametre="unselected"%>
+<%end%>
+
+<% if controller.controller_name=="parametres" %>
+  <% classutilisateur="unselected"%>
+  <% classfonction="unselected"%>
+  <% classservice="unselected"%>
+  <% classsite="unselected"%>
+  <% classparametre="selected"%>
+<%end%>
+
+<div id="navigation">
+  <div id="nav-utilisateur" class="<%= h classutilisateur%>">
+    <%= link_to "Utilisateurs", utilisateurs_path %>
+  </div>
+  <div id="nav-fonction" class="<%= h classfonction%>">
+    <%= link_to "Fonctions", fonctions_path %>
+  </div>
+  <div id="nav-service" class="<%= h classservice%>">
+    <%= link_to "Services", services_path %>
+  </div>
+  <div id="nav-site" class="<%= h classsite%>">
+    <%= link_to "Sites", sites_path %>
+  </div>
+ <div id="nav-parametre" class="<%= h classparametre%>"> 
+    <%= link_to "Options", parametres_path %>
+  </div>
+  <div id="nav-logout" class="unselected">
+    <%= link_to "", {:controller=>"admin",:action=>"logout"} %>
+  </div>
+</div>
